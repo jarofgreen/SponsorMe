@@ -44,7 +44,7 @@ function parseXml(xml) {
 function showSlide1() {
 	$('#Slide4').hide();
 	$('#Slide1').show();
-	setTimeout("showSlide3()",2000);
+	setTimeout("showSlide2()",2000);
 }
 
 function showSlide2() {
@@ -77,6 +77,8 @@ function showSlide3() {
 		markerIcon = new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png',size,offset);
 
 	}
+
+	dataPosition = 0
 
 	var olPoint = new OpenLayers.LonLat(dataPoints[0][0],dataPoints[1][1]).transform(latLngProjection,map.getProjectionObject());
 	map.setCenter(olPoint,12);
