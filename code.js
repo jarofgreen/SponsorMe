@@ -17,7 +17,7 @@ $(document).ready(function() {
 	$('#Slide3').hide();
 	$('#Slide4').hide();
 
-	setTimeout("showSlide2()",2000);
+	setTimeout("showSlide2()",10000);
 
 	$.ajax({
 	    type: "GET",
@@ -44,13 +44,13 @@ function parseXml(xml) {
 function showSlide1() {
 	$('#Slide4').hide();
 	$('#Slide1').show();
-	setTimeout("showSlide2()",2000);
+	setTimeout("showSlide2()",10000);
 }
 
 function showSlide2() {
 	$('#Slide1').hide();
 	$('#Slide2').show();
-	setTimeout("showSlide3()",2000);
+	setTimeout("showSlide3()",10000);
 }
 
 function showSlide3() {
@@ -89,7 +89,7 @@ function showSlide3() {
 function showNextPoint() {
 
 	if (dataPosition >= dataPoints.length) {
-		setTimeout("showSlide4()",5000);
+		setTimeout("showSlide4()",10000);
 		map.zoomTo(8);
 		return;
 	}
@@ -103,7 +103,7 @@ function showNextPoint() {
 	markers.addMarker(new OpenLayers.Marker(olPoint,markerIcon.clone()))
 
 	dataPosition += 1;
-	setTimeout("showNextPoint()",250);
+	setTimeout("showNextPoint()",200);
 
 }
 
@@ -111,5 +111,5 @@ function showSlide4() {
 	$('#Slide3').hide();
 	$('#Slide4').show();
 	markers.clearMarkers();
-	setTimeout("showSlide1()",2000);
+	setTimeout("showSlide1()",20000);
 }
