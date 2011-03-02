@@ -1,4 +1,3 @@
-
 var map;
 
 var markers;
@@ -60,7 +59,7 @@ function showSlide3() {
 	if (!map) {
 		var options = {
 			projection: new OpenLayers.Projection("EPSG:900913"),
-			displayProjection: new OpenLayers.Projection("EPSG:4326"),
+			displayProjection: new OpenLayers.Projection("EPSG:4326")
 		   };
 
 		map = new OpenLayers.Map("Map",options);
