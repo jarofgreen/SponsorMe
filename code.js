@@ -77,7 +77,7 @@ function showSlide3() {
 
 	}
 
-	dataPosition = 0
+	dataPosition = 0;
 
 	var olPoint = new OpenLayers.LonLat(dataPoints[0][0],dataPoints[1][1]).transform(latLngProjection,map.getProjectionObject());
 	map.setCenter(olPoint,12);
